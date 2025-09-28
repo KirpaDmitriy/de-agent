@@ -54,7 +54,7 @@ dag = DAG(
     '{dag_id}',
     default_args=default_args,
     description='Auto-generated ETL pipeline',
-    schedule_interval={'f"\\"{schedule_interval}\\"" if schedule_interval else "None"'},
+    schedule_interval={f'"{schedule_interval}"' if schedule_interval else "None"},
     catchup=False,
     tags=['auto-generated', 'etl'],
 )
